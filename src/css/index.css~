@@ -1,0 +1,17 @@
+.well
+{
+color:white;
+font-size:30px;
+text-align:center;
+background-color:black;
+}
+ul
+{
+background-color:lightgrey;
+}
+.simcir
+{
+width:400px;
+height:100px;
+}
+

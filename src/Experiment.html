@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>Multiplexer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/Experiment.css">
+<link rel="stylesheet" type="text/css" href="css/simcir/simcir.css" />
+<link rel="stylesheet" type="text/css" href="css/simcir/simcir-basicset.css" />
+<script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/simcir/simcir.js"></script>
+<!-- <script type="text/javascript" src="js/simcir/simcir-library.js"></script> -->
+<script type="text/javascript" src="js/simcir/simcir-basicset.js"></script>
+<script>
+    $(function() {
+        var $s = simcir;
+        var $simcir = $('#mySimcir');
+        var getCircuitData = function() {
+            return $s.controller(
+                    $simcir.find('.simcir-workspace') ).text();
+        };
+        var setCircuitData = function(data) {
+            $simcir.children().remove();
+            $s.setupSimcir($simcir, JSON.parse(data) );
+        };
+        // button click events
+        $('#getDataBtn').click(function() {
+            $('#dataArea').val(getCircuitData() );
+        });
+        $('#setDataBtn').click(function() {
+            setCircuitData($('#dataArea').val() );
+        });
+        // load default (just specifies circuit size).
+        setCircuitData('{"width":1145,"height":750}');
+    });
+</script>
+</head>
+<body style="background-color:lightgrey";>
+<div class="well well-sm">Multiplexer Simulation</div> 
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#home">Simulate</a></li>
+    <li class="active"><a data-toggle="pill" href="Experiment.html">Clear</a></li> &nbsp; 
+    <!-- <li class="active"><a data-toggle="pill" href="#menu2">Load</a></li> -->
+    <div class="dropdown" align="right">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Load Multiplexer
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu dropdown-menu-right">
+      <li><a href="#">2x1 Multiplexer</a></li>
+      <li><a href="#">4x1 Multiplexer</a></li>
+      <li><a href="#">8x1 Multiplexer</a></li>
+    </ul>
+  </div>
+  </ul> 
+
+<div class="row">
+<div class="col-sm-12">
+	<div id="mySimcir" class="simcir"></div>
+</div>
+</div>
+</div>
+
+</body>
+</html>

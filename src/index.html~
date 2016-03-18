@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Multiplexer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/simcir/simcir.css" />
+<link rel="stylesheet" type="text/css" href="css/simcir/simcir-basicset.css" />
+<script type="text/javascript" src="js/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/simcir/simcir.js"></script>
+<script type="text/javascript" src="js/simcir/simcir-library.js"></script>
+<script type="text/javascript" src="js/simcir/simcir-basicset.js"></script>
+</head>
+<body>
+<div class="well well-sm">Multiplexer</div> 
+<div class="container">
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#home">Simulate</a></li>
+    <li class="active"><a data-toggle="pill" href="#menu1">Clear</a></li>
+    <li class="active"><a data-toggle="pill" href="#menu2">Load</a></li>
+  </ul>
+
+<div class="simcir">
+</div>
+
+</div>
+</body>
+</html>
